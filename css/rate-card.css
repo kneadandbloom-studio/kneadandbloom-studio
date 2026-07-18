@@ -1,0 +1,367 @@
+/* ================================================================
+   rate-card.css
+   Creative Studio @ The Knead & Bloom Co.
+   Page-specific styles for rate-card.html only.
+   Requires: shared.css
+   ================================================================ */
+
+/* ── HERO ───────────────────────────────────────────────────── */
+.hero {
+  min-height: 52vh;
+  background: var(--brown);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 9rem 3rem 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 680px; height: 680px;
+  border-radius: 50%;
+  border: 1px solid rgba(196, 133, 106, 0.07);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 1000px; height: 1000px;
+  border-radius: 50%;
+  border: 1px solid rgba(196, 133, 106, 0.035);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hero-monogram {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(6rem, 14vw, 14rem);
+  font-weight: 300;
+  color: rgba(245, 240, 232, 0.035);
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+  z-index: 0;
+}
+
+.hero-eyebrow {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--blush);
+  margin-bottom: 1.5rem;
+  position: relative; z-index: 1;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.2s;
+}
+
+.hero-headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 5.5vw, 5.2rem);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--cream);
+  margin-bottom: 1.5rem;
+  position: relative; z-index: 1;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.4s;
+}
+
+.hero-headline em {
+  font-style: italic;
+  color: var(--blush-light);
+}
+
+.hero-divider {
+  width: 3rem;
+  height: 1px;
+  background: var(--blush);
+  margin: 0 auto 1.75rem;
+  position: relative; z-index: 1;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.55s;
+}
+
+.hero-sub {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: rgba(245, 240, 232, 0.55);
+  max-width: 50ch;
+  position: relative; z-index: 1;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.7s;
+}
+
+/* ── PACKAGES SECTION ───────────────────────────────────────── */
+#packages {
+  padding: 7rem 6rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5px;
+  background: rgba(44, 31, 20, 0.1);
+}
+
+.pkg-card {
+  background: var(--cream);
+  padding: 3rem 2.5rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.4s ease;
+}
+
+.pkg-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 3px;
+  background: var(--blush);
+  transition: width 0.5s ease;
+}
+
+.pkg-card:hover { background: var(--cream-dark); }
+.pkg-card:hover::before { width: 100%; }
+
+.pkg-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  font-weight: 300;
+  color: rgba(44, 31, 20, 0.04);
+  position: absolute;
+  top: 1rem; right: 1.5rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.pkg-tag {
+  display: inline-block;
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.75rem;
+  border-radius: 100px;
+  margin-bottom: 1.25rem;
+  background: rgba(196, 133, 106, 0.1);
+  color: var(--blush);
+}
+
+.pkg-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem, 2vw, 1.9rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--brown);
+  margin-bottom: 0.5rem;
+}
+
+.pkg-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  font-weight: 300;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.pkg-desc {
+  font-size: 0.87rem;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--brown-mid);
+  margin-bottom: 1.5rem;
+  max-width: 36ch;
+}
+
+.pkg-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.pkg-pill {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.65rem;
+  border: 1px solid rgba(44, 31, 20, 0.14);
+  color: var(--brown-mid);
+  border-radius: 100px;
+}
+
+.pkg-turnaround {
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blush);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* ── ADD-ONS SECTION ────────────────────────────────────────── */
+#addons {
+  background: var(--cream-dark);
+  padding: 7rem 6rem;
+}
+
+.addons-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.addons-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 0.5rem;
+}
+
+.addon-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(196, 133, 106, 0.2);
+}
+
+.addon-row:first-child { border-top: 1px solid rgba(196, 133, 106, 0.2); }
+
+.addon-name {
+  font-size: 0.87rem;
+  font-weight: 300;
+  color: var(--brown-mid);
+  line-height: 1.5;
+}
+
+.addon-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--gold);
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* ── HOW IT WORKS SECTION ───────────────────────────────────── */
+#how-it-works {
+  background: var(--brown);
+  padding: 7rem 6rem;
+}
+
+.how-header {
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+}
+
+.how-header .section-label { color: var(--blush-light); }
+.how-header .section-title { color: var(--cream); }
+.how-header .section-intro { color: rgba(245, 240, 232, 0.55); }
+
+.steps-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5px;
+  background: rgba(196, 133, 106, 0.1);
+}
+
+.step-card {
+  background: rgba(245, 240, 232, 0.035);
+  padding: 2.5rem 2rem;
+  transition: background 0.3s;
+}
+
+.step-card:hover { background: rgba(245, 240, 232, 0.055); }
+
+.step-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--blush);
+  opacity: 0.45;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+
+.step-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.step-body {
+  font-size: 0.83rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(245, 240, 232, 0.5);
+}
+
+/* ── FOOTER CTA (rate-card variant) ────────────────────────── */
+.footer-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cream);
+  background: var(--blush);
+  text-decoration: none;
+  padding: 0.9rem 2rem;
+  transition: background 0.25s;
+}
+
+.footer-cta:hover { background: var(--gold); }
+
+/* ── MOBILE ─────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero { padding: 7rem 2rem 4rem; }
+
+  #packages { padding: 4rem 1.5rem; }
+  .packages-grid { grid-template-columns: 1fr; }
+  .pkg-card { padding: 2.5rem 2rem; }
+
+  #addons { padding: 4rem 1.5rem; }
+  .addons-inner { grid-template-columns: 1fr; gap: 3rem; }
+
+  #how-it-works { padding: 4rem 1.5rem; }
+  .steps-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 540px) {
+  .steps-grid { grid-template-columns: 1fr; }
+}

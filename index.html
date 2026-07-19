@@ -18,9 +18,10 @@
     <span class="nav-sub">@ The Knead &amp; Bloom Co.</span>
   </a>
   <ul class="nav-links">
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#how-it-works">How It Works</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="rates.html">Rates</a></li>
     <li><a href="#contact" class="nav-cta">Work With Us</a></li>
     <li><a href="https://kneadandbloom.com" target="_blank" class="nav-parent-link">← kneadandbloom.com</a></li>
   </ul>
@@ -56,6 +57,704 @@
     </div>
   </div>
 </section>
+
+<!-- ── ABOUT ─────────────────────────────────────────────────── -->
+<section class="about-strip" id="about">
+  <div class="reveal">
+    <p class="section-label">About the Studio</p>
+    <h2 class="section-title">Built by a maker,<br />for <em>makers.</em></h2>
+    <p class="about-body">
+      Creative Studio is the web development arm of The Knead &amp; Bloom Co. —
+      a family of ventures rooted in craft, community, and creativity, based in
+      San Diego, CA. Every site the studio builds comes from first-hand
+      experience running a small business on the web.
+    </p>
+    <p class="about-body">
+      No bloated platforms. No mystery invoices. Just clean, professional
+      websites built on a stack you'll actually understand — designed to grow
+      with you.
+    </p>
+    <div class="about-signature">— The Knead &amp; Bloom Co.</div>
+  </div>
+
+  <div class="about-stats reveal">
+    <div class="stat">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Active Sites Live</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">0</div>
+      <div class="stat-label">Page Builders Used</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">1</div>
+      <div class="stat-label">Real Human Behind It</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">∞</div>
+      <div class="stat-label">Care Per Project</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ──────────────────────────────────────────── -->
+<section id="how-it-works">
+  <div class="how-header reveal">
+    <p class="section-label">For Potential Clients</p>
+    <h2 class="section-title" style="color: var(--cream)">
+      How your website<br /><em style="color: var(--blush-light)"
+        >actually works.</em
+      >
+    </h2>
+    <p class="section-intro">
+      No jargon. No mystery. Click any component in the diagram below to see a
+      plain-language explanation of what it does and why it matters for your
+      business.
+    </p>
+    <span class="diagram-hint">Click any component to learn what it does</span>
+  </div>
+
+  <div class="diagram-shell reveal">
+    <!-- DIAGRAM -->
+    <div class="diagram-box">
+      <svg viewBox="0 0 640 680" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker
+            id="arr"
+            viewBox="0 0 10 10"
+            refX="8"
+            refY="5"
+            markerWidth="6"
+            markerHeight="6"
+            orient="auto-start-reverse"
+          >
+            <path
+              d="M2 1L8 5L2 9"
+              fill="none"
+              stroke="rgba(200,170,130,0.7)"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </marker>
+        </defs>
+
+        <!-- ══ ROW 1: VISITOR (centred) ══ -->
+        <g class="node" id="n-visitor" onclick="showPanel('visitor')">
+          <rect
+            x="200"
+            y="18"
+            width="200"
+            height="52"
+            rx="10"
+            fill="rgba(240,235,225,0.1)"
+            stroke="rgba(200,170,130,0.55)"
+            stroke-width="1"
+          />
+          <text
+            x="300"
+            y="38"
+            text-anchor="middle"
+            dominant-baseline="central"
+            font-family="'Jost',sans-serif"
+            font-size="13"
+            font-weight="500"
+            fill="rgba(245,240,232,0.9)"
+          >
+            Your website visitor
+          </text>
+          <text
+            x="300"
+            y="56"
+            text-anchor="middle"
+            dominant-baseline="central"
+            font-family="'Jost',sans-serif"
+            font-size="11"
+            font-weight="300"
+            fill="rgba(245,240,232,0.5)"
+          >
+            browses your site
+          </text>
+        </g>
+
+        <!-- visitor → host (down) -->
+        <line
+          x1="300"
+          y1="70"
+          x2="300"
+          y2="115"
+          stroke="rgba(200,170,130,0.55)"
+          stroke-width="1"
+          marker-end="url(#arr)"
+        />
+        <text
+          x="310"
+          y="95"
+          font-family="'Jost',sans-serif"
+          font-size="10"
+          fill="rgba(200,170,130,0.55)"
+        >
+          visits site
+        </text>
+
+        <!-- host → visitor (return arc, right side — page served) -->
+        <path
+          d="M510 143 Q560 143 560 44 Q560 18 500 18"
+          fill="none"
+          stroke="rgba(200,170,130,0.35)"
+          stroke-width="1"
+          marker-end="url(#arr)"
+        />
+        <text
+          x="568"
+          y="95"
+          font-family="'Jost',sans-serif"
+          font-size="10"
+          fill="rgba(200,170,130,0.35)"
+          text-anchor="start"
+        >
+          page served
+        </text>
+
+        <!-- ══ ROW 2: CODE  |  HOST  |  PAYMENT ══ -->
+
+        <!-- ── Code storage ── -->
+        <g class="node" id="n-code" onclick="showPanel('code')">
+          <rect
+            x="22"
+            y="115"
+            width="165"
+            height="52"
+            rx="10"
+            fill="rgba(127,119,221,0.2)"
+            stroke="rgba(127,119,221,0.55)"
+            stroke-width="1"
+          />
+          <text
+            x="104"
+            y="135"
+            text-anchor="middle"
+            dominant-baseline="central"
+            font-family="'Jost',sans-serif"
+            font-size="13"
+            font-weight="500"
+            fill="rgba(210,205,255,0.9)"
+          >
+            Code storage
+          </text>
+          <text
+            x="104"
+            y="153"
+            text-anchor="middle"
+            dominant-baseline="central"
+            font-family="'Jost',sans-serif"
+            font-size="11"
+            font-weight="300"
+            fill="rgba(210,205,255,0.65)"
+          >
+            where updates are saved
+          </text>
+        </g>
+
+        <!-- code → host (push, horizontal) -->
+        <line
+          x1="187"
+          y1="141"
+          x2="228"
+          y2="141"
+          stroke="rgba(200,170,130,0.55)"
+          stroke-width="1"
+          marker-end="url(#arr)"
+        />
+        <text
+          x="195"
+          y="133"
+          font-family="'Jost',sans-serif"
+          font-size="10"
+          fill="rgba(200,170,130,0.55)"
+        >
+          push
+        </text>
+
+        <!-- ── Website host ── -->
+        <g class="node" id="n-host" onclick="showPanel('host')">
+          <rect
+            x="230"
+            y="115"
+            width="185"
+            height="52"
+            rx="10"
+            fill="rgba(29,158,117,0.18)"
+            stroke="rgba(29,158,117,0.6)"
+            stroke-width="1"
+          />
+          <text
+            x="322"
+            y="135"
+            text-anchor="middle"
+            dominant-baseline="central"
+            font-family="'Jost',sans-serif"
+            font-size="13"
+            font-weight="500"
+            fill="rgba(180,240,210,0.9)"
+          >
+            Website host
+          </text>
+          <text
+            x="322"
+            y="153"
+            text-anchor="middle"
+            dominant-baseline="central"
+            font-family="'Jost',sans-serif"
+            font-size="11"
+            font-weight="300"
+            fill="rgba(180,240,210,0.65)"
+          >
+            serves pages, handles logic
+          </text>
+        </g>
+
+        <!-- host → payment (checkout, horizontal →) -->
+        <line
+          x1="415"
+          y1="136"
+          x2="453"
+          y2="136"
+          stroke="rgba(200,170,130,0.55)"
+          stroke-width="1"
+          marker-end="url(#arr)"
+        />
+        <text
+          x="420"
+          y="128"
+          font-family="'Jost',sans-serif"
+          font-size="10"
+          fill="rgba(200,170,130,0.55)"
+        >
+          checkout
+        </text>
+
+        <!-- payment → host (confirm, horizontal ←) -->
+        <line
+          x1="453"
+          y1="152"
+          x2="415"
+          y2="152"
+          stroke="rgba(200,170,130,0.4)"
+          stroke-width="1"
+          marker-end="url(#arr)"
+        />
+        <text
+          x="422"
+          y="166"
+          font-family="'Jost',sans-serif"
+          font-size="10"
+          fill="rgba(200,170,130,0.4)"
+        >
+          confirm
+        </text>
+
+        <!-- ── Payment processor ── -->
+        <g class="node" id="n-payment" onclick="showPanel('payment')">
+          <rect
+            x="455"
+            y="115"
+            width="155"
+            height="52"
+            rx="10"
+            fill="rgba(55,138,221,0.18)"
+            stroke="rgba(55,138,221,0.6)"
+            stroke-width="1"
+          />
+          <text
+            x="532"
+            y="135"
+            text-anchor="middle"
+            dominant-baseline="central"
+            font-family="'Jost',sans-serif"
+            font-size="13"
+            font-weight="500"
+            fill="rgba(160,210,255,0.9)"
+          >
+            Payment processor
+          </text>
+          <text
+            x="532"
+            y="153"
+            text-anchor="middle"
+            dominant-baseline="central"
+            font-family="'Jost',sans-serif"
+            font-size="11"
+            font-weight="300"
+            fill="rgba(160,210,255,0.65)"
+          >
+            handles purchases
+          </text>
+        </g>
+
+        <!-- ══ ROW 3: DATABASE  (left col, below host) ══ -->
+
+        <!-- host → db (form data, down-left ↓) -->
+        <line
+          x1="275"
+          y1="167"
+          x2="275"
+          y2="272"
+          stroke="rgba(200,170,130,0.55)"
+          stroke-width="1"
+          marker-end="url(#arr)"
+        />
+        <text
+          x="178"
+          y="222"
+          font-family="'Jost',sans-serif"
+          font-size="10"
+          fill="rgba(200,170,130,0.55)"
+        >
+          form data
+        </text>
+
+        <!-- db → host (content, up-right ↑) -->
+        <line
+          x1="254"
+          y1="272"
+          x2="254"
+          y2="167"
+          stroke="rgba(200,170,130,0.4)"
+          stroke-width="1"
+          marker-end="url(#arr)"
+        />
+        <text
+          x="213"
+          y="248"
+          font-family="'Jost',sans-serif"
+          font-size="10"
+          fill="rgba(200,170,130,0.4)"
+        >
+          content
+        </text>
+
+        <!-- ── Database ── -->
+        <g class="node" id="n-db" onclick="showPanel('db')">
+          <rect
+            x="22"
+            y="272"
+            width="188"
+            height="52"
+            rx="10"
+            fill="rgba(186,117,23,0.2)"
+            stroke="rgba(186,117,23,0.6)"
+            stroke-width="1"
+          />
+          <text
+            x="116"
+            y="291"
+            text-anchor="middle"
+            dominant-baseline="central"
+            font-family="'Jost',sans-serif"
+            font-size="13"
+            font-weight="500"
+            fill="rgba(255,220,150,0.9)"
+          >
+            Database
+          </text>
+          <text
+            x="116"
+            y="309"
+            text-anchor="middle"
+            dominant-baseline="central"
+            font-family="'Jost',sans-serif"
+            font-size="11"
+            font-weight="300"
+            fill="rgba(255,220,150,0.65)"
+          >
+            stores your business data
+          </text>
+        </g>
+
+        <!-- ══ ROW 4: MEDIA STORAGE  (left col, below db) ══ -->
+
+        <!-- db → media (asset URLs, dashed ↓) -->
+        <line
+          x1="116"
+          y1="324"
+          x2="116"
+          y2="414"
+          stroke="rgba(200,170,130,0.45)"
+          stroke-width="1"
+          stroke-dasharray="5,4"
+          marker-end="url(#arr)"
+        />
+        <text
+          x="30"
+          y="366"
+          font-family="'Jost',sans-serif"
+          font-size="10"
+          fill="rgba(200,170,130,0.45)"
+        >
+          asset URLs
+        </text>
+
+        <!-- media → host (media fetch, dashed diagonal) -->
+        <path
+          d="M148 414 L268 167"
+          fill="none"
+          stroke="rgba(200,170,130,0.3)"
+          stroke-width="1"
+          stroke-dasharray="5,4"
+          marker-end="url(#arr)"
+        />
+        <text
+          x="168"
+          y="385"
+          font-family="'Jost',sans-serif"
+          font-size="10"
+          fill="rgba(200,170,130,0.35)"
+        >
+          media fetch
+        </text>
+
+        <!-- ── Image & media storage ── -->
+        <g class="node" id="n-media" onclick="showPanel('media')">
+          <rect
+            x="22"
+            y="416"
+            width="188"
+            height="52"
+            rx="10"
+            fill="rgba(216,90,48,0.18)"
+            stroke="rgba(216,90,48,0.6)"
+            stroke-width="1"
+          />
+          <text
+            x="116"
+            y="436"
+            text-anchor="middle"
+            dominant-baseline="central"
+            font-family="'Jost',sans-serif"
+            font-size="13"
+            font-weight="500"
+            fill="rgba(255,185,165,0.9)"
+          >
+            Image &amp; media storage
+          </text>
+          <text
+            x="116"
+            y="454"
+            text-anchor="middle"
+            dominant-baseline="central"
+            font-family="'Jost',sans-serif"
+            font-size="11"
+            font-weight="300"
+            fill="rgba(255,185,165,0.65)"
+          >
+            hosts photos &amp; files
+          </text>
+        </g>
+
+        <!-- ══ ROW 3–4 RIGHT COL: EMAIL (below payment) ══ -->
+
+        <!-- payment → email (order trigger ↓) -->
+        <line
+          x1="532"
+          y1="167"
+          x2="532"
+          y2="414"
+          stroke="rgba(200,170,130,0.55)"
+          stroke-width="1"
+          marker-end="url(#arr)"
+        />
+        <text
+          x="542"
+          y="295"
+          font-family="'Jost',sans-serif"
+          font-size="10"
+          fill="rgba(200,170,130,0.55)"
+        >
+          order trigger
+        </text>
+
+        <!-- db → email (subscriber data, dashed curved) -->
+        <path
+          d="M210 298 Q370 298 453 443"
+          fill="none"
+          stroke="rgba(200,170,130,0.35)"
+          stroke-width="1"
+          stroke-dasharray="5,4"
+          marker-end="url(#arr)"
+        />
+        <text
+          x="296"
+          y="289"
+          text-anchor="middle"
+          font-family="'Jost',sans-serif"
+          font-size="10"
+          fill="rgba(200,170,130,0.35)"
+        >
+          subscriber data
+        </text>
+
+        <!-- ── Email service ── -->
+        <g class="node" id="n-email" onclick="showPanel('email')">
+          <rect
+            x="455"
+            y="416"
+            width="155"
+            height="52"
+            rx="10"
+            fill="rgba(99,153,34,0.18)"
+            stroke="rgba(99,153,34,0.6)"
+            stroke-width="1"
+          />
+          <text
+            x="532"
+            y="436"
+            text-anchor="middle"
+            dominant-baseline="central"
+            font-family="'Jost',sans-serif"
+            font-size="13"
+            font-weight="500"
+            fill="rgba(190,240,140,0.9)"
+          >
+            Email service
+          </text>
+          <text
+            x="532"
+            y="454"
+            text-anchor="middle"
+            dominant-baseline="central"
+            font-family="'Jost',sans-serif"
+            font-size="11"
+            font-weight="300"
+            fill="rgba(190,240,140,0.65)"
+          >
+            sends &amp; automates emails
+          </text>
+        </g>
+
+        <!-- email → visitor (email out arc, right side) -->
+        <path
+          d="M600 430 Q620 400 620 50 Q620 18 600 18"
+          fill="none"
+          stroke="rgba(200,170,130,0.3)"
+          stroke-width="1"
+          marker-end="url(#arr)"
+        />
+        <text
+          x="542"
+          y="392"
+          font-family="'Jost',sans-serif"
+          font-size="10"
+          fill="rgba(200,170,130,0.35)"
+        >
+          email out
+        </text>
+
+        <!-- ══ LEGEND ══ -->
+        <rect
+          x="22"
+          y="598"
+          width="462"
+          height="64"
+          rx="8"
+          fill="none"
+          stroke="rgba(200,170,130,0.15)"
+          stroke-width="1"
+          stroke-dasharray="5,4"
+        />
+        <text
+          x="38"
+          y="618"
+          font-family="'Jost',sans-serif"
+          font-size="11"
+          font-weight="500"
+          fill="rgba(200,170,130,0.5)"
+        >
+          Legend
+        </text>
+        <line
+          x1="88"
+          y1="632"
+          x2="130"
+          y2="632"
+          stroke="rgba(200,170,130,0.65)"
+          stroke-width="1.5"
+          marker-end="url(#arr)"
+        />
+        <text
+          x="136"
+          y="636"
+          font-family="'Jost',sans-serif"
+          font-size="10"
+          fill="rgba(200,170,130,0.5)"
+        >
+          Live request / real-time action
+        </text>
+        <line
+          x1="88"
+          y1="652"
+          x2="130"
+          y2="652"
+          stroke="rgba(200,170,130,0.45)"
+          stroke-width="1"
+          stroke-dasharray="5,4"
+          marker-end="url(#arr)"
+        />
+        <text
+          x="136"
+          y="656"
+          font-family="'Jost',sans-serif"
+          font-size="10"
+          fill="rgba(200,170,130,0.45)"
+        >
+          Background / reference fetch
+        </text>
+
+        <text
+          x="310"
+          y="580"
+          text-anchor="middle"
+          font-family="'Jost',sans-serif"
+          font-size="10"
+          fill="rgba(200,170,130,0.28)"
+        >
+          All services run on free or near-free tiers for typical small business
+          usage
+        </text>
+      </svg>
+    </div>
+
+    <!-- INFO PANEL -->
+    <div class="info-panel-wrap">
+      <div class="info-panel" id="info-panel">
+        <div id="panel-content">
+          <div class="panel-empty-dark">
+            <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
+              <circle
+                cx="20"
+                cy="20"
+                r="18"
+                stroke="rgba(245,240,232,0.4)"
+                stroke-width="1.5"
+              />
+              <path
+                d="M20 14v8M20 26v1"
+                stroke="rgba(245,240,232,0.4)"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+            <p>
+              Click any component in the diagram to see a plain-language
+              explanation of what it does for your business.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- ── PORTFOLIO ─────────────────────────────────────────────── -->
 <section id="portfolio">
@@ -120,234 +819,7 @@
   </div>
 </section>
 
-<!-- ── HOW IT WORKS ──────────────────────────────────────────── -->
-<section id="how-it-works">
-  <div class="how-header reveal">
-    <p class="section-label">For Potential Clients</p>
-    <h2 class="section-title" style="color:var(--cream);">How your website<br/><em style="color:var(--blush-light);">actually works.</em></h2>
-    <p class="section-intro">No jargon. No mystery. Click any component in the diagram below to see a plain-language explanation of what it does and why it matters for your business.</p>
-    <span class="diagram-hint">Click any component to learn what it does</span>
-  </div>
 
-  <div class="diagram-shell reveal">
-    <!-- DIAGRAM -->
-    <div class="diagram-box">
-      <svg viewBox="0 0 640 680" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5"
-                  markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-            <path d="M2 1L8 5L2 9" fill="none" stroke="rgba(200,170,130,0.7)"
-                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </marker>
-        </defs>
-
-        <!-- ══ ROW 1: VISITOR (centred) ══ -->
-        <g class="node" id="n-visitor" onclick="showPanel('visitor')">
-          <rect x="200" y="18" width="200" height="52" rx="10"
-                fill="rgba(240,235,225,0.1)" stroke="rgba(200,170,130,0.55)" stroke-width="1"/>
-          <text x="300" y="38" text-anchor="middle" dominant-baseline="central"
-                font-family="'Jost',sans-serif" font-size="13" font-weight="500" fill="rgba(245,240,232,0.9)">Your website visitor</text>
-          <text x="300" y="56" text-anchor="middle" dominant-baseline="central"
-                font-family="'Jost',sans-serif" font-size="11" font-weight="300" fill="rgba(245,240,232,0.5)">browses your site</text>
-        </g>
-
-        <!-- visitor → host (down) -->
-        <line x1="300" y1="70" x2="300" y2="115"
-              stroke="rgba(200,170,130,0.55)" stroke-width="1" marker-end="url(#arr)"/>
-        <text x="310" y="95" font-family="'Jost',sans-serif" font-size="10" fill="rgba(200,170,130,0.55)">visits site</text>
-
-        <!-- host → visitor (return arc, right side — page served) -->
-        <path d="M510 143 Q560 143 560 44 Q560 18 500 18"
-              fill="none" stroke="rgba(200,170,130,0.35)" stroke-width="1" marker-end="url(#arr)"/>
-        <text x="568" y="95" font-family="'Jost',sans-serif" font-size="10" fill="rgba(200,170,130,0.35)" text-anchor="start">page served</text>
-
-        <!-- ══ ROW 2: CODE  |  HOST  |  PAYMENT ══ -->
-
-        <!-- ── Code storage ── -->
-        <g class="node" id="n-code" onclick="showPanel('code')">
-          <rect x="22" y="115" width="165" height="52" rx="10"
-                fill="rgba(127,119,221,0.2)" stroke="rgba(127,119,221,0.55)" stroke-width="1"/>
-          <text x="104" y="135" text-anchor="middle" dominant-baseline="central"
-                font-family="'Jost',sans-serif" font-size="13" font-weight="500" fill="rgba(210,205,255,0.9)">Code storage</text>
-          <text x="104" y="153" text-anchor="middle" dominant-baseline="central"
-                font-family="'Jost',sans-serif" font-size="11" font-weight="300" fill="rgba(210,205,255,0.65)">where updates are saved</text>
-        </g>
-
-        <!-- code → host (push, horizontal) -->
-        <line x1="187" y1="141" x2="228" y2="141"
-              stroke="rgba(200,170,130,0.55)" stroke-width="1" marker-end="url(#arr)"/>
-        <text x="195" y="133" font-family="'Jost',sans-serif" font-size="10" fill="rgba(200,170,130,0.55)">push</text>
-
-        <!-- ── Website host ── -->
-        <g class="node" id="n-host" onclick="showPanel('host')">
-          <rect x="230" y="115" width="185" height="52" rx="10"
-                fill="rgba(29,158,117,0.18)" stroke="rgba(29,158,117,0.6)" stroke-width="1"/>
-          <text x="322" y="135" text-anchor="middle" dominant-baseline="central"
-                font-family="'Jost',sans-serif" font-size="13" font-weight="500" fill="rgba(180,240,210,0.9)">Website host</text>
-          <text x="322" y="153" text-anchor="middle" dominant-baseline="central"
-                font-family="'Jost',sans-serif" font-size="11" font-weight="300" fill="rgba(180,240,210,0.65)">serves pages, handles logic</text>
-        </g>
-
-        <!-- host → payment (checkout, horizontal →) -->
-        <line x1="415" y1="136" x2="453" y2="136"
-              stroke="rgba(200,170,130,0.55)" stroke-width="1" marker-end="url(#arr)"/>
-        <text x="420" y="128" font-family="'Jost',sans-serif" font-size="10" fill="rgba(200,170,130,0.55)">checkout</text>
-
-        <!-- payment → host (confirm, horizontal ←) -->
-        <line x1="453" y1="152" x2="415" y2="152"
-              stroke="rgba(200,170,130,0.4)" stroke-width="1" marker-end="url(#arr)"/>
-        <text x="422" y="166" font-family="'Jost',sans-serif" font-size="10" fill="rgba(200,170,130,0.4)">confirm</text>
-
-        <!-- ── Payment processor ── -->
-        <g class="node" id="n-payment" onclick="showPanel('payment')">
-          <rect x="455" y="115" width="155" height="52" rx="10"
-                fill="rgba(55,138,221,0.18)" stroke="rgba(55,138,221,0.6)" stroke-width="1"/>
-          <text x="532" y="135" text-anchor="middle" dominant-baseline="central"
-                font-family="'Jost',sans-serif" font-size="13" font-weight="500" fill="rgba(160,210,255,0.9)">Payment processor</text>
-          <text x="532" y="153" text-anchor="middle" dominant-baseline="central"
-                font-family="'Jost',sans-serif" font-size="11" font-weight="300" fill="rgba(160,210,255,0.65)">handles purchases</text>
-        </g>
-
-        <!-- ══ ROW 3: DATABASE  (left col, below host) ══ -->
-
-        <!-- host → db (form data, down-left ↓) -->
-        <line x1="275" y1="167" x2="275" y2="272"
-              stroke="rgba(200,170,130,0.55)" stroke-width="1" marker-end="url(#arr)"/>
-        <text x="178" y="222" font-family="'Jost',sans-serif" font-size="10" fill="rgba(200,170,130,0.55)">form data</text>
-
-        <!-- db → host (content, up-right ↑) -->
-        <line x1="254" y1="272" x2="254" y2="167"
-              stroke="rgba(200,170,130,0.4)" stroke-width="1" marker-end="url(#arr)"/>
-        <text x="213" y="248" font-family="'Jost',sans-serif" font-size="10" fill="rgba(200,170,130,0.4)">content</text>
-
-        <!-- ── Database ── -->
-        <g class="node" id="n-db" onclick="showPanel('db')">
-          <rect x="22" y="272" width="188" height="52" rx="10"
-                fill="rgba(186,117,23,0.2)" stroke="rgba(186,117,23,0.6)" stroke-width="1"/>
-          <text x="116" y="291" text-anchor="middle" dominant-baseline="central"
-                font-family="'Jost',sans-serif" font-size="13" font-weight="500" fill="rgba(255,220,150,0.9)">Database</text>
-          <text x="116" y="309" text-anchor="middle" dominant-baseline="central"
-                font-family="'Jost',sans-serif" font-size="11" font-weight="300" fill="rgba(255,220,150,0.65)">stores your business data</text>
-        </g>
-
-        <!-- ══ ROW 4: MEDIA STORAGE  (left col, below db) ══ -->
-
-        <!-- db → media (asset URLs, dashed ↓) -->
-        <line x1="116" y1="324" x2="116" y2="414"
-              stroke="rgba(200,170,130,0.45)" stroke-width="1" stroke-dasharray="5,4" marker-end="url(#arr)"/>
-        <text x="30" y="366" font-family="'Jost',sans-serif" font-size="10" fill="rgba(200,170,130,0.45)">asset URLs</text>
-
-        <!-- media → host (media fetch, dashed diagonal) -->
-        <path d="M148 414 L268 167" fill="none"
-              stroke="rgba(200,170,130,0.3)" stroke-width="1" stroke-dasharray="5,4" marker-end="url(#arr)"/>
-        <text x="168" y="385" font-family="'Jost',sans-serif" font-size="10" fill="rgba(200,170,130,0.35)">media fetch</text>
-
-        <!-- ── Image & media storage ── -->
-        <g class="node" id="n-media" onclick="showPanel('media')">
-          <rect x="22" y="416" width="188" height="52" rx="10"
-                fill="rgba(216,90,48,0.18)" stroke="rgba(216,90,48,0.6)" stroke-width="1"/>
-          <text x="116" y="436" text-anchor="middle" dominant-baseline="central"
-                font-family="'Jost',sans-serif" font-size="13" font-weight="500" fill="rgba(255,185,165,0.9)">Image &amp; media storage</text>
-          <text x="116" y="454" text-anchor="middle" dominant-baseline="central"
-                font-family="'Jost',sans-serif" font-size="11" font-weight="300" fill="rgba(255,185,165,0.65)">hosts photos &amp; files</text>
-        </g>
-
-        <!-- ══ ROW 3–4 RIGHT COL: EMAIL (below payment) ══ -->
-
-        <!-- payment → email (order trigger ↓) -->
-        <line x1="532" y1="167" x2="532" y2="414"
-              stroke="rgba(200,170,130,0.55)" stroke-width="1" marker-end="url(#arr)"/>
-        <text x="542" y="295" font-family="'Jost',sans-serif" font-size="10" fill="rgba(200,170,130,0.55)">order trigger</text>
-
-        <!-- db → email (subscriber data, dashed curved) -->
-        <path d="M210 298 Q370 298 453 443" fill="none"
-              stroke="rgba(200,170,130,0.35)" stroke-width="1" stroke-dasharray="5,4" marker-end="url(#arr)"/>
-        <text x="296" y="289" text-anchor="middle"
-              font-family="'Jost',sans-serif" font-size="10" fill="rgba(200,170,130,0.35)">subscriber data</text>
-
-        <!-- ── Email service ── -->
-        <g class="node" id="n-email" onclick="showPanel('email')">
-          <rect x="455" y="416" width="155" height="52" rx="10"
-                fill="rgba(99,153,34,0.18)" stroke="rgba(99,153,34,0.6)" stroke-width="1"/>
-          <text x="532" y="436" text-anchor="middle" dominant-baseline="central"
-                font-family="'Jost',sans-serif" font-size="13" font-weight="500" fill="rgba(190,240,140,0.9)">Email service</text>
-          <text x="532" y="454" text-anchor="middle" dominant-baseline="central"
-                font-family="'Jost',sans-serif" font-size="11" font-weight="300" fill="rgba(190,240,140,0.65)">sends &amp; automates emails</text>
-        </g>
-
-        <!-- email → visitor (email out arc, right side) -->
-        <path d="M600 430 Q620 400 620 50 Q620 18 600 18"
-              fill="none" stroke="rgba(200,170,130,0.3)" stroke-width="1" marker-end="url(#arr)"/>
-        <text x="542" y="392" font-family="'Jost',sans-serif" font-size="10" fill="rgba(200,170,130,0.35)">email out</text>
-
-        <!-- ══ LEGEND ══ -->
-        <rect x="22" y="598" width="462" height="64" rx="8"
-              fill="none" stroke="rgba(200,170,130,0.15)" stroke-width="1" stroke-dasharray="5,4"/>
-        <text x="38" y="618" font-family="'Jost',sans-serif" font-size="11" font-weight="500" fill="rgba(200,170,130,0.5)">Legend</text>
-        <line x1="88" y1="632" x2="130" y2="632"
-              stroke="rgba(200,170,130,0.65)" stroke-width="1.5" marker-end="url(#arr)"/>
-        <text x="136" y="636" font-family="'Jost',sans-serif" font-size="10" fill="rgba(200,170,130,0.5)">Live request / real-time action</text>
-        <line x1="88" y1="652" x2="130" y2="652"
-              stroke="rgba(200,170,130,0.45)" stroke-width="1" stroke-dasharray="5,4" marker-end="url(#arr)"/>
-        <text x="136" y="656" font-family="'Jost',sans-serif" font-size="10" fill="rgba(200,170,130,0.45)">Background / reference fetch</text>
-
-        <text x="310" y="580" text-anchor="middle"
-              font-family="'Jost',sans-serif" font-size="10" fill="rgba(200,170,130,0.28)">
-          All services run on free or near-free tiers for typical small business usage
-        </text>
-      </svg>
-    </div>
-
-    <!-- INFO PANEL -->
-    <div class="info-panel-wrap">
-      <div class="info-panel" id="info-panel">
-        <div id="panel-content">
-          <div class="panel-empty-dark">
-            <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
-              <circle cx="20" cy="20" r="18" stroke="rgba(245,240,232,0.4)" stroke-width="1.5"/>
-              <path d="M20 14v8M20 26v1" stroke="rgba(245,240,232,0.4)" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            <p>Click any component in the diagram to see a plain-language explanation of what it does for your business.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── ABOUT ─────────────────────────────────────────────────── -->
-<section class="about-strip" id="about">
-  <div class="reveal">
-    <p class="section-label">About the Studio</p>
-    <h2 class="section-title">Built by a maker,<br/>for <em>makers.</em></h2>
-    <p class="about-body">
-      Creative Studio is the web development arm of The Knead &amp; Bloom Co. — a family of ventures rooted in craft, community, and creativity, based in San Diego, CA. Every site the studio builds comes from first-hand experience running a small business on the web.
-    </p>
-    <p class="about-body">
-      No bloated platforms. No mystery invoices. Just clean, professional websites built on a stack you'll actually understand — designed to grow with you.
-    </p>
-    <div class="about-signature">— The Knead &amp; Bloom Co.</div>
-  </div>
-
-  <div class="about-stats reveal">
-    <div class="stat">
-      <div class="stat-num">3</div>
-      <div class="stat-label">Active Sites Live</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">0</div>
-      <div class="stat-label">Page Builders Used</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">1</div>
-      <div class="stat-label">Real Human Behind It</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">∞</div>
-      <div class="stat-label">Care Per Project</div>
-    </div>
-  </div>
-</section>
 
 <!-- ── CONTACT ───────────────────────────────────────────────── -->
 <section id="contact">
@@ -442,7 +914,7 @@
   </div>
   <p class="footer-copy">© 2026 The Knead &amp; Bloom Co. · San Diego, CA</p>
   <ul class="footer-links">
-    <li><a href="https://kneadandbloom.com" target="_blank">Knead &amp; Bloom</a></li>
+    <li><a href="https://kneadandbloom.com" target="_blank">Knead &amp; Bloom Co.</a></li>
     <li><a href="https://bakecookcreate.com" target="_blank">Bake Cook &amp; Create</a></li>
     <li><a href="https://homebakedforhomeless.com" target="_blank">Home-Baked for Homeless</a></li>
   </ul>

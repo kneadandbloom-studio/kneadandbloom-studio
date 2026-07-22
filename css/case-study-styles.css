@@ -34,6 +34,10 @@ body::before {
   z-index: 9999;
 }
 
+a:link {
+  color: var(--blush);
+}
+
 /* ── NAV ────────────────────────────────────────────────────── */
 nav {
   position: fixed;
@@ -413,6 +417,67 @@ nav {
   background: var(--blush);
   margin-top: 7px;
   flex-shrink: 0;
+}
+
+/* ── ORDER FLOW WALKTHROUGH ─────────────────────────────────── */
+.cs-walkthrough {
+  background: var(--cream-dark);
+  padding: 7rem 6rem;
+}
+
+.cs-walkthrough-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cs-walkthrough .section-label { color: var(--blush); }
+.cs-walkthrough .section-title { color: var(--brown); }
+.cs-walkthrough .section-intro { color: var(--brown-mid); }
+
+.cs-walkthrough-scroll {
+  display: flex;
+  gap: 1.75rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--blush) transparent;
+}
+
+.cs-walkthrough-scroll::-webkit-scrollbar { height: 6px; }
+.cs-walkthrough-scroll::-webkit-scrollbar-thumb { background: var(--blush); border-radius: 100px; }
+.cs-walkthrough-scroll::-webkit-scrollbar-track { background: rgba(44,31,20,0.06); }
+
+.cs-walkthrough-item {
+  flex: 0 0 340px;
+  scroll-snap-align: start;
+}
+
+.cs-walkthrough-item img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  object-position: bottom;
+  border-radius: 4px;
+  box-shadow: 0 16px 48px rgba(44,31,20,0.04);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.cs-walkthrough-step {
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--blush);
+  margin-bottom: 0.4rem;
+}
+
+.cs-walkthrough-caption {
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--brown-mid);
 }
 
 /* ── TECHNICAL DEEP DIVE ────────────────────────────────────── */
@@ -811,3 +876,31 @@ footer {
 
   footer { flex-direction: column; text-align: center; padding: 2.5rem 1.5rem; }
 }
+
+
+/* ── PLACEHOLDER VISUAL (content-pending) ───────────────────── */
+.cs-placeholder {
+  aspect-ratio: 4 / 3;
+  border: 2px dashed rgba(196, 133, 106, 0.35);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(196, 133, 106, 0.04);
+}
+.cs-placeholder-icon { font-size: 1.8rem; opacity: 0.5; }
+.cs-placeholder-label {
+  font-size: 0.62rem; font-weight: 500; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--blush);
+}
+.cs-placeholder-note {
+  font-size: 0.78rem; font-weight: 300; color: var(--brown-mid);
+  line-height: 1.5; max-width: 28ch;
+}
+.cs-placeholder--dark { border-color: rgba(245, 240, 232, 0.25); background: rgba(245, 240, 232, 0.04); }
+.cs-placeholder--dark .cs-placeholder-label { color: var(--blush-light); }
+.cs-placeholder--dark .cs-placeholder-note { color: rgba(245, 240, 232, 0.5); }

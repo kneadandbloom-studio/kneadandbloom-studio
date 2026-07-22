@@ -13,19 +13,27 @@
 
 <!-- ── NAV ──────────────────────────────────────────────────── -->
 <nav>
-  <a href="/" class="nav-brand" style="text-decoration:none;">
+  <a href="/" class="nav-brand" style="text-decoration: none">
     <span class="nav-wordmark">Creative Studio</span>
     <span class="nav-sub">@ The Knead &amp; Bloom Co.</span>
   </a>
-  <ul class="nav-links">
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#how-it-works">How It Works</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="rates.html">Rates</a></li>
     <li><a href="#contact" class="nav-cta">Work With Us</a></li>
-    <li><a href="https://kneadandbloom.com" target="_blank" class="nav-parent-link">← kneadandbloom.com</a></li>
+    <li>
+      <a href="https://kneadandbloom.com" target="_blank" class="nav-parent-link">← kneadandbloom.com</a>
+    </li>
   </ul>
 </nav>
+
 
 <!-- ── HERO ─────────────────────────────────────────────────── -->
 <section class="hero">
@@ -773,16 +781,16 @@
       <h3 class="portfolio-name">BCC Payment<br />Integration</h3>
       <p class="portfolio-desc">
         End-to-end Stripe checkout for a home bakery — serverless, PCI-compliant,
-        and fully automated. Every payment triggers an Airtable order record and a
-        Brevo confirmation email, with zero platform fee.
+        and fully automated. Every payment triggers a database order record and a
+        confirmation email, with zero platform fee.
       </p>
       <div class="portfolio-meta">
         <span class="portfolio-pill">Stripe</span>
-        <span class="portfolio-pill">Netlify Fns</span>
-        <span class="portfolio-pill">Airtable</span>
-        <span class="portfolio-pill">Brevo</span>
+        <span class="portfolio-pill">Web Hosting</span>
+        <span class="portfolio-pill">Database</span>
+        <span class="portfolio-pill">Email Service</span>
       </div>
-      <a href="/portfolio/case-studies/bcc-stripe-integration.html" class="portfolio-link">View case study ✦</a>
+      <a href="/work/case-studies/bcc-stripe-integration.html" class="portfolio-link">View case study ✦</a>
     </div>
 
 
@@ -882,9 +890,12 @@
           <label for="contactNeed">What do you need?</label>
           <select id="contactNeed" name="project_type">
             <option value="" disabled selected>Select the best fit…</option>
-            <option>A brand new website</option>
-            <option>A website refresh</option>
-            <option>Landing page only</option>
+            <option>Full Small Business Site</option>
+            <option>Website Refresh</option>
+            <option>Landing Page</option>
+            <option>Contact Form &amp; Email automation</option>
+            <option>Online Payments or Booking</option>
+            <option>Client or Inventory Tracker</option>
             <option>Not sure yet — let's talk</option>
           </select>
         </div>
@@ -1182,5 +1193,7 @@ try {
   }
 }
 </script>
+
+<script src="/scripts/site-scripts.js" defer></script>
 </body>
 </html>

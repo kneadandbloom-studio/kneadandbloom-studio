@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BCC Payment Integration · Creative Studio @ The Knead &amp; Bloom Co.</title>
+<meta name="description" content="How we built a secure, end-to-end Stripe payment integration for a home bakery — with zero platform fees and full database and CRM automation." />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/case-study-styles.css" />
+
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────────────────────────── -->
+<nav>
+  <a href="/" class="nav-brand">
+    <span class="nav-wordmark">Creative Studio</span>
+    <span class="nav-sub">@ The Knead &amp; Bloom Co.</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#portfolio">Portfolio</a></li>
+    <li><a href="/#how-it-works">How It Works</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#contact" class="nav-cta">Work With Us</a></li>
+  </ul>
+</nav>
+
+<!-- ── CASE STUDY HERO ──────────────────────────────────────── -->
+<section class="cs-hero">
+  <div class="cs-hero-inner">
+
+    <!-- Left: text -->
+    <div class="cs-hero-text">
+    <div class="cs-breadcrumb">
+      <a href="/">Home</a>
+      <span class="cs-breadcrumb-sep">/</span>
+      <a href="/#portfolio">Portfolio</a>
+      <span class="cs-breadcrumb-sep">/</span>
+      <span class="cs-breadcrumb-current">BCC Payment Integration</span>
+    </div>
+
+    <p class="cs-eyebrow">Case Study · Full-Stack Build</p>
+    <h1 class="cs-headline">
+      Secure payments,<br/>
+      zero platform<br/>
+      <em>overhead.</em>
+    </h1>
+    <p class="cs-summary">
+      A complete Stripe payment integration for a home bakery — built on serverless architecture so card data never touches the server, orders write automatically to the database, and every purchase triggers a CRM confirmation email. No monthly SaaS fee. No proprietary lock-in.
+    </p>
+
+
+    </div><!-- /cs-hero-text -->
+    <div class="cs-meta">
+  <div class="cs-meta-item">
+    <div class="cs-meta-label">Client</div>
+    <div class="cs-meta-value">Bake Cook &amp; Create<br />by Allie C.</div>
+  </div>
+  <div class="cs-meta-item">
+    <div class="cs-meta-label">Industry</div>
+    <div class="cs-meta-value">Home Bakery ·<br />Food &amp; Lifestyle</div>
+  </div>
+  <div class="cs-meta-item">
+    <div class="cs-meta-label">Project Type</div>
+    <div class="cs-meta-value">Payment Integration ·<br />Automation Build</div>
+  </div>
+  <div class="cs-meta-item">
+    <div class="cs-meta-label">Stack</div>
+    <div class="cs-meta-pills">
+      <span class="cs-meta-pill">Stripe</span>
+      <span class="cs-meta-pill">Web Hosting</span>
+      <span class="cs-meta-pill">Database</span>
+      <span class="cs-meta-pill">CRM</span>
+      <span class="cs-meta-pill">Repo</span>
+    </div>
+  </div>
+  <div class="cs-meta-item">
+    <div class="cs-meta-label">Status</div>
+    <div class="cs-meta-value">Live</div>
+  </div>
+</div>
+
+
+    <!-- Right: BCC order landing page -->
+    <div class="cs-hero-visual">
+      <img src="/assets/bcc-stripe/bcc-order-landing.png" alt="BCC order landing page — Fresh from the Oven" />
+    </div>
+
+  </div>
+</section>
+
+<!-- ── THREE-COLUMN STORY ────────────────────────────────────── -->
+<section class="cs-story">
+  <div class="cs-story-grid">
+
+    <div class="cs-story-col reveal">
+      <div class="cs-col-number">01</div>
+      <span class="cs-col-label">The Problem</span>
+      <h2 class="cs-col-heading">A real business needing real checkout.</h2>
+      <div class="cs-col-body">
+        <p>A licensed home bakery operating on a single cottage food permit needed a way to accept payments online — without paying a platform like Shopify $39/month before a single sale was made.</p>
+        <p>Template site builders offered checkout, but came with proprietary lock-in, limited customization, and recurring fees that eat into small margins. What was needed was a custom integration that worked exactly the way the business did — and cost nothing to run.</p>
+      </div>
+    </div>
+
+    <div class="cs-story-col reveal">
+      <div class="cs-col-number">02</div>
+      <span class="cs-col-label">What I Built</span>
+      <h2 class="cs-col-heading">End-to-end, fully automated checkout.</h2>
+      <div class="cs-col-body">
+        <p>A serverless Stripe integration — checkout initiated from the site, processed through a hosting function (so no secret keys ever touch the browser), and confirmed via Stripe webhook.</p>
+        <p>On a successful payment, the webhook fires a second hosting function that writes the order record to the database and triggers a CRM confirmation email automatically. The customer gets their receipt; the baker gets her order — without touching a thing.</p>
+      </div>
+    </div>
+
+    <div class="cs-story-col reveal">
+      <div class="cs-col-number">03</div>
+      <span class="cs-col-label">The Outcome</span>
+      <h2 class="cs-col-heading">Full checkout running at near-zero cost.</h2>
+      <div class="cs-col-body">
+        <ul class="cs-col-list">
+          <li>Live Stripe checkout — no platform middleman, no monthly SaaS fee</li>
+          <li>PCI compliant by design — card data never touches the server</li>
+          <li>Every confirmed order auto-writes to the database for records and fulfillment</li>
+          <li>CRM confirmation email fires automatically on every purchase</li>
+          <li>Entire integration runs on the hosting platform's free tier — $0/month infrastructure</li>
+          <!-- <li>[Add: orders processed, revenue to date — when ready to share]</li> -->
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── ORDER FLOW WALKTHROUGH ─────────────────────────────────── -->
+<section class="cs-walkthrough">
+  <div class="cs-walkthrough-inner reveal">
+    <p class="section-label">The Experience</p>
+    <h2 class="section-title">Walk through<br/><em>the actual order.</em></h2>
+    <p class="section-intro">Four screens, one flow — from first contact to a confirmed pickup point. Everything below is live, not a mockup.</p>
+
+    <div class="cs-walkthrough-scroll">
+      <div class="cs-walkthrough-item">
+        <img src="/assets/bcc-stripe/bcc-order-step1-your-details.png" alt="Order form step 1: your details" />
+        <div class="cs-walkthrough-step">Step 1 · Your Details</div>
+        <div class="cs-walkthrough-caption">Contact info captured once, used to auto-fill confirmation and pickup coordination.</div>
+      </div>
+      <div class="cs-walkthrough-item">
+        <img src="/assets/bcc-stripe/bcc-order-step2-menu-selection.png" alt="Order form step 2: this week's menu" />
+        <div class="cs-walkthrough-step">Step 2 · This Week's Menu</div>
+        <div class="cs-walkthrough-caption">Live inventory — only what's actually available this week is shown.</div>
+      </div>
+      <div class="cs-walkthrough-item">
+        <img src="/assets/bcc-stripe/bcc-order-step2-size-options.png" alt="Order form step 2: size and shape options" />
+        <div class="cs-walkthrough-step">Step 2 · Size &amp; Shape</div>
+        <div class="cs-walkthrough-caption">Each item can carry its own variant options, priced independently.</div>
+      </div>
+      <div class="cs-walkthrough-item">
+        <img src="/assets/bcc-stripe/bcc-order-step3-meeting-point.png" alt="Order form step 3: choose a meeting point" />
+        <div class="cs-walkthrough-step">Step 3 · Meeting Point</div>
+        <div class="cs-walkthrough-caption">GPS-driven pickup/delivery locations pulled from a database, each with transit info and a flat travel fee — this became its own case study (<a href="/" target="_blank">BCC Delivery &amp; Pickup</a>).</div>
+      </div>
+      <div class="cs-walkthrough-item">
+        <img src="/assets/bcc-stripe/bcc-order-step4-review-payment.png" alt="Order form step 4: review your order and pay" />
+        <div class="cs-walkthrough-step">Step 4 · Review &amp; Pay</div>
+        <div class="cs-walkthrough-caption">Order, meeting point, and timeslot confirmed in one summary — then handed off to Stripe for secure payment.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TECHNICAL DEEP DIVE ───────────────────────────────────── -->
+<section class="cs-technical">
+  <div class="cs-technical-inner">
+
+    <div class="reveal">
+      <p class="section-label">Under the Hood</p>
+      <h2 class="section-title">How the payment<br/><em>flow actually works.</em></h2>
+      <p class="section-intro">No jargon. A plain walkthrough of what happens between "Add to cart" and "Your order is confirmed" — and why each step is designed the way it is.</p>
+    </div>
+
+    <div class="cs-flow-layout">
+    <div class="flow-steps reveal">
+
+      <div class="flow-step">
+        <div class="flow-step-connector">
+          <div class="flow-step-num">1</div>
+          <div class="flow-step-line"></div>
+        </div>
+        <div class="flow-step-content">
+          <div class="flow-step-title">Customer initiates checkout</div>
+          <div class="flow-step-body">The customer clicks "Order" on the BCC site. Instead of sending payment details to the site directly, the page calls a serverless function from your website host — a small piece of server-side code that runs in the cloud on demand.</div>
+          <span class="flow-step-tag">Site → Website Host Function</span>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-connector">
+          <div class="flow-step-num">2</div>
+          <div class="flow-step-line"></div>
+        </div>
+        <div class="flow-step-content">
+          <div class="flow-step-title">Website host creates a Stripe checkout session</div>
+          <div class="flow-step-body">The website host's function holds the Stripe secret key securely — it never appears in the browser or in the site's code. It creates a checkout session with the order details and returns a session ID to the browser.</div>
+          <span class="flow-step-tag">Website Host Function → Stripe API</span>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-connector">
+          <div class="flow-step-num">3</div>
+          <div class="flow-step-line"></div>
+        </div>
+        <div class="flow-step-content">
+          <div class="flow-step-title">Customer completes payment on Stripe's hosted page</div>
+          <div class="flow-step-body">The customer is redirected to Stripe's hosted checkout page — a Stripe-owned URL with Stripe's own SSL certificate. Stripe handles all card entry, validation, and processing entirely on their servers. No payment data ever touches the BCC site or passes through the website's hosting service.</div>
+          <span class="flow-step-tag">Stripe hosted checkout · stripe.com domain · PCI compliant</span>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-connector">
+          <div class="flow-step-num">4</div>
+          <div class="flow-step-line"></div>
+        </div>
+        <div class="flow-step-content">
+          <div class="flow-step-title">Stripe fires a webhook on success</div>
+          <div class="flow-step-body">When payment is confirmed, Stripe sends a webhook — a secure server-to-server notification — to a second website host function. This is the trigger for everything downstream. The webhook is verified cryptographically to prevent spoofing.</div>
+          <span class="flow-step-tag">Stripe Webhook → Website Host Function</span>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-connector">
+          <div class="flow-step-num">5</div>
+          <div class="flow-step-line"></div>
+        </div>
+        <div class="flow-step-content">
+          <div class="flow-step-title">Order writes to database automatically</div>
+          <div class="flow-step-body">The webhook function extracts the order details from Stripe's payload and writes a new record to the BCC database Orders table — customer name, email, items, amount, timestamp, and status. The baker can see every order in one place without logging into Stripe.</div>
+          <span class="flow-step-tag">Website Hosting Function → Database API</span>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-connector">
+          <div class="flow-step-num">6</div>
+          <div class="flow-step-line"></div>
+        </div>
+        <div class="flow-step-content">
+          <div class="flow-step-title">CRM sends the confirmation email</div>
+          <div class="flow-step-body">The same webhook function calls the CRM provider's API to trigger a transactional confirmation email to the customer — personalized with their name, order details, and next steps. No manual follow-up needed. The entire sequence from payment to receipt takes seconds.</div>
+          <span class="flow-step-tag">Website Hosting Function → CRM Provider API · Auto-sent</span>
+        </div>
+      </div>
+    </div><!-- /flow-steps -->
+
+    <!-- Stripe checkout — real screenshot -->
+    <div class="cs-flow-sticky reveal">
+      <div class="cs-stripe-mockup">
+        <img src="/assets/bcc-stripe/bcc-stripe-checkout.png" alt="Stripe hosted checkout with order summary and card entry form" style="width:100%;border-radius:8px;box-shadow:0 32px 80px rgba(0,0,0,0.65);display:block;" />
+      </div>
+    </div>
+
+    </div><!-- /cs-flow-layout -->
+
+    <div class="reveal">
+      <p class="section-label" style="color:var(--blush-light);">Why This Stack</p>
+      <h3 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,2.5vw,2.4rem); font-weight:300; color:var(--cream); margin-bottom:0.75rem; line-height:1.15;">Three reasons this is built the way it is.</h3>
+      <p class="section-intro">Every decision in this integration was made deliberately — for security, maintainability, and cost.</p>
+    </div>
+
+    <div class="cs-why-grid reveal">
+      <div class="cs-why-card">
+        <span class="cs-why-icon">🔒</span>
+        <div class="cs-why-title">Security by architecture</div>
+        <div class="cs-why-body">Secret keys live only in the website host's environment variables — never in the browser, never in the codebase. Stripe handles all card data. Webhooks are cryptographically verified. This isn't a workaround; it's how Stripe recommends you build.</div>
+      </div>
+      <div class="cs-why-card">
+        <span class="cs-why-icon">⚙️</span>
+        <div class="cs-why-body cs-why-title" style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:400; color:var(--cream); margin-bottom:0.5rem;">Zero ongoing platform cost</div>
+        <div class="cs-why-body">Website host functions run serverless — you only pay when they run, and free tier covers thousands of calls per month. Database and CRM provider's free tiers handle the downstream automation. Stripe charges per transaction only. No monthly SaaS fee, ever.</div>
+      </div>
+      <div class="cs-why-card">
+        <span class="cs-why-icon">🔗</span>
+        <div class="cs-why-title">One payment, full automation</div>
+        <div class="cs-why-body">The webhook is the keystone: one confirmed payment triggers the database write and the CRM email in the same function call. Nothing falls through the cracks. The baker never needs to manually log an order or send a receipt.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── WHAT THIS MEANS FOR YOU ───────────────────────────────── -->
+<section class="cs-transferable">
+  <div class="cs-transferable-inner">
+
+    <div class="reveal">
+      <p class="section-label">For Your Business</p>
+      <h2 class="section-title" style="color:var(--brown);">What this means<br/><em style="color:var(--blush);">if you sell online.</em></h2>
+      <blockquote class="cs-pull-quote">
+        "You don't need a $39/month platform to take payments. You need a well-built integration — once — that runs itself."
+      </blockquote>
+      <p class="cs-pull-attr">— Creative Studio @ The Knead &amp; Bloom Co.</p>
+    </div>
+
+    <div class="cs-niches reveal">
+
+      <div class="cs-niche">
+        <div class="cs-niche-name">Food &amp; cottage makers</div>
+        <div class="cs-niche-body">Whether you're selling baked goods, preserves, soaps, or handmade goods under a cottage license — this integration scales with you. Sell one product or twenty; the cost stays the same.</div>
+      </div>
+
+      <div class="cs-niche">
+        <div class="cs-niche-name">Small service businesses</div>
+        <div class="cs-niche-body">Take deposits, sell packages, or accept bookings. The same Stripe + website host architecture handles all of it — and every transaction logs itself to your records automatically.</div>
+      </div>
+
+      <div class="cs-niche">
+        <div class="cs-niche-name">Nonprofits &amp; mission-driven orgs</div>
+        <div class="cs-niche-body">Accept donations, sell event tickets, or run a merchandise shop — with all the professionalism of a large organization and none of the overhead. Your budget goes to your mission, not your platform.</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ── CTA STRIP ─────────────────────────────────────────────── -->
+<section class="cs-cta-strip reveal">
+  <p class="cs-cta-eyebrow">Ready to build?</p>
+  <h2 class="cs-cta-headline">Your checkout,<br/><em>your way.</em></h2>
+  <p class="cs-cta-sub">If you're ready to accept payments without paying a platform to do it — let's talk. This is exactly what the Studio was built for.</p>
+  <div class="cs-cta-actions">
+    <a href="/#contact" class="cs-cta-btn">Start a conversation ✦</a>
+    <a href="/#portfolio" class="cs-cta-back">← Back to portfolio</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ────────────────────────────────────────────────── -->
+<footer>
+  <div>
+    <div class="footer-wordmark">Creative Studio</div>
+    <div class="footer-sub">@ The Knead &amp; Bloom Co.</div>
+  </div>
+  <div class="footer-copy">© 2025 The Knead &amp; Bloom Co. · San Diego, CA</div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(
+  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+  { threshold: 0.12 }
+);
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

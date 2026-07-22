@@ -19,6 +19,9 @@
   --sage:          #7a8c6e;
   --text:          #2c1f14;
   --grain-opacity: 0.04;
+
+    /* transition */
+  --t: .28s cubic-bezier(.4,0,.2,1);
 }
 
 html { scroll-behavior: smooth; }
@@ -243,7 +246,112 @@ footer {
 /* ── MOBILE — shared elements ───────────────────────────────── */
 @media (max-width: 900px) {
   nav { padding: 1rem 1.5rem; }
-  .nav-links { display: none; }
   footer { flex-direction: column; text-align: center; padding: 2.5rem 1.5rem; }
   .footer-links { display: none; }
 }
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .nav-logo-text { display: none; }
+}
+
+.nav-toggle {
+  display: none;                  /* hidden on desktop */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background var(--t);
+  z-index: 200;
+}
+.nav-toggle:hover { background: rgba(181,131,74,.08); }
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--brown);
+  border-radius: 2px;
+  transition: transform .3s cubic-bezier(.4,0,.2,1),
+              opacity   .3s cubic-bezier(.4,0,.2,1),
+              width     .3s cubic-bezier(.4,0,.2,1);
+  transform-origin: center;
+}
+
+/* Animate to X when open */
+.nav-toggle.is-open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-toggle.is-open span:nth-child(2) { opacity: 0; width: 0; }
+.nav-toggle.is-open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+
+@media (max-width: 768px) {
+  /* Show the hamburger button */
+  .nav-toggle { display: flex; }
+
+  /* Slide-down drawer */
+  .nav-links {
+    position: fixed;
+    top: 80px;               /* matches nav height */
+    left: 0; right: 0;
+    background: rgba(250,247,242,.97);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(181,131,74,.18);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 1rem 0 1.5rem;
+    /* hidden state */
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity .28s cubic-bezier(.4,0,.2,1),
+                transform .28s cubic-bezier(.4,0,.2,1);
+  }
+
+  /* Open state — toggled by JS adding .is-open to .nav-links */
+  .nav-links.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* Each link becomes a full-width tap target */
+  .nav-links li { width: 100%; }
+
+  .nav-links a {
+    display: block;
+    padding: .85rem clamp(1.5rem, 6vw, 2.5rem);
+    font-size: .8rem;
+    letter-spacing: .12em;
+    border-bottom: 1px solid rgba(181,131,74,.08);
+    transition: background .2s, color .2s;
+  }
+  .nav-links a:hover { background: rgba(181,131,74,.06); color: var(--blush); }
+
+  /* "Order Now" pill — full-width with margin */
+  .nav-links .btn-nav {
+    display: block;
+    margin: 1rem clamp(1.5rem, 6vw, 2.5rem) 0;
+    padding: .75rem 1.25rem;
+    text-align: center;
+    border-radius: 50px;
+    border-bottom: none;
+  }
+  .nav-links .btn-nav:hover { transform: none; }
+}
+
+@media (max-width: 480px) {
+  nav { padding: 0 1rem; }
+  /* No more li:not(:last-child) { display: none } — drawer shows all links */
+}
+
+/* ── BODY SCROLL LOCK when menu is open ─────────────────────── */
+/* Applied by JS — prevents page scrolling behind the open drawer */
+body.nav-open { overflow: hidden; }

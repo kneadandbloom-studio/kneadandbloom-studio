@@ -5,6 +5,7 @@
    Requires: shared.css
    ================================================================ */
 
+
 /* ── HERO ───────────────────────────────────────────────────── */
 .hero {
   min-height: 100vh;
@@ -728,3 +729,4 @@
   #contact { padding: 4rem 1.5rem; }
   .contact-row { grid-template-columns: 1fr; }
 }
+

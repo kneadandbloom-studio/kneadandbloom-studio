@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Services &amp; Rates — Creative Studio @ The Knead &amp; Bloom Co.</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/shared.css" />
-<link rel="stylesheet" href="css/rate-card.css" />
+<link rel="stylesheet" href="/css/shared.css" />
+<link rel="stylesheet" href="/css/rate-card.css" />
 </head>
 <body>
 
@@ -16,6 +16,11 @@
     <span class="nav-wordmark">Creative Studio</span>
     <span class="nav-sub">@ The Knead &amp; Bloom Co.</span>
   </a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
   <ul class="nav-links">
     <li><a href="#packages">Packages</a></li>
     <li><a href="#addons">Add-Ons</a></li>
@@ -31,7 +36,7 @@
   <div class="hero-eyebrow">Creative Studio @ The Knead &amp; Bloom Co.</div>
   <h1 class="hero-headline">Services &amp; <em>Rates</em></h1>
   <div class="hero-divider"></div>
-  <p class="hero-sub">Flat-rate packages. Fast turnaround. No billing surprises.<br>Most projects ship in 5–7 business days.</p>
+  <p class="hero-sub">Flat-rate packages. Fast turnaround. No billing surprises.<br>Most projects ship in 2–3 business days.</p>
 </section>
 
 <!-- ── PACKAGES ─────────────────────────────────────────────── -->
@@ -54,7 +59,7 @@
         <span class="pkg-pill">Mobile responsive</span>
         <span class="pkg-pill">Deployed &amp; live</span>
       </div>
-      <div class="pkg-turnaround">⏱ &nbsp;2–3 days</div>
+      <div class="pkg-turnaround">⏱ &nbsp;2–3 business days</div>
     </div>
 
     <div class="pkg-card reveal">
@@ -69,7 +74,7 @@
         <span class="pkg-pill">Auto-reply</span>
         <span class="pkg-pill">Spam filtering</span>
       </div>
-      <div class="pkg-turnaround">⏱ &nbsp;1–2 days</div>
+      <div class="pkg-turnaround">⏱ &nbsp;1–2 business days</div>
     </div>
 
     <div class="pkg-card reveal">
@@ -83,7 +88,7 @@
         <span class="pkg-pill">Product setup</span>
         <span class="pkg-pill">Confirmation emails</span>
       </div>
-      <div class="pkg-turnaround">⏱ &nbsp;2–3 days</div>
+      <div class="pkg-turnaround">⏱ &nbsp;2–3 business days</div>
     </div>
 
     <div class="pkg-card reveal">
@@ -91,14 +96,14 @@
       <span class="pkg-tag">Stay organised</span>
       <div class="pkg-name">Client or Inventory Tracker</div>
       <div class="pkg-price">$300</div>
-      <p class="pkg-desc">A simple, powerful Airtable-based system to track your clients, orders, or inventory — accessible from anywhere.</p>
+      <p class="pkg-desc">A simple, powerful database system to track your clients, orders, or inventory — accessible from anywhere.</p>
       <div class="pkg-pills">
-        <span class="pkg-pill">Airtable database</span>
+        <span class="pkg-pill">Database</span>
         <span class="pkg-pill">Custom views</span>
         <span class="pkg-pill">Team access</span>
         <span class="pkg-pill">Training included</span>
       </div>
-      <div class="pkg-turnaround">⏱ &nbsp;2–3 days</div>
+      <div class="pkg-turnaround">⏱ &nbsp;2–3 business days</div>
     </div>
 
     <div class="pkg-card reveal">
@@ -113,7 +118,7 @@
         <span class="pkg-pill">Speed improvements</span>
         <span class="pkg-pill">Updated content</span>
       </div>
-      <div class="pkg-turnaround">⏱ &nbsp;3–4 days</div>
+      <div class="pkg-turnaround">⏱ &nbsp;3–5 business days</div>
     </div>
 
     <div class="pkg-card reveal">
@@ -128,7 +133,7 @@
         <span class="pkg-pill">Contact form</span>
         <span class="pkg-pill">Deployed &amp; live</span>
       </div>
-      <div class="pkg-turnaround">⏱ &nbsp;5–7 days</div>
+      <div class="pkg-turnaround">⏱ &nbsp;5–7 business days</div>
     </div>
 
   </div>
@@ -226,5 +231,7 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
+
+<script src="/scripts/site-scripts.js" defer></script>
 </body>
 </html>

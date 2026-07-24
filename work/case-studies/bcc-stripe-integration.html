@@ -6,6 +6,7 @@
 <title>BCC Payment Integration · Creative Studio @ The Knead &amp; Bloom Co.</title>
 <meta name="description" content="How we built a secure, end-to-end Stripe payment integration for a home bakery — with zero platform fees and full database and CRM automation." />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/shared.css" />
 <link rel="stylesheet" href="/css/case-study-styles.css" />
 
 </head>
@@ -13,17 +14,26 @@
 
 <!-- ── NAV ──────────────────────────────────────────────────── -->
 <nav>
-  <a href="/" class="nav-brand">
+  <a href="/" class="nav-brand" style="text-decoration: none">
     <span class="nav-wordmark">Creative Studio</span>
     <span class="nav-sub">@ The Knead &amp; Bloom Co.</span>
   </a>
-  <ul class="nav-links">
-    <li><a href="/#portfolio">Portfolio</a></li>
-    <li><a href="/#how-it-works">How It Works</a></li>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="/#about">About</a></li>
+    <li><a href="/#how-it-works">How It Works</a></li>
+    <li><a href="/rates.html">Rates</a></li>
     <li><a href="/#contact" class="nav-cta">Work With Us</a></li>
+    <li>
+      <a href="https://studio.kneadandbloom.com" target="_blank" class="nav-parent-link">← Home</a>
+    </li>
   </ul>
 </nav>
+
 
 <!-- ── CASE STUDY HERO ──────────────────────────────────────── -->
 <section class="cs-hero">
@@ -353,5 +363,7 @@ const observer = new IntersectionObserver(
 );
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
+
+<script src="/scripts/site-scripts.js" defer></script>
 </body>
 </html>
